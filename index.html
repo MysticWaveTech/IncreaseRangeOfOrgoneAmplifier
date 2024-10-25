@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orgone Amplifier Range Extender</title>
+    <style>
+        body {
+            background-color: #1a1a2e;
+            font-family: Arial, sans-serif;
+            color: #e0e0e0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        h1 {
+            color: orange;
+            font-size: 2.5em;
+            text-shadow: 0 0 10px #ff7b00, 0 0 20px #ff7b00, 0 0 30px #ff7b00;
+        }
+        .upload-section {
+            background: linear-gradient(145deg, #3b0c59, #220646);
+            box-shadow: 0 0 20px rgba(70, 0, 130, 0.6), inset 0 0 15px rgba(255, 20, 147, 0.6);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .upload-section input {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #222;
+            color: #e0e0e0;
+            border: 2px solid #ff7b00;
+            border-radius: 5px;
+            box-shadow: 0 0 10px #ff7b00, inset 0 0 5px #ff7b00;
+        }
+        .button {
+            background: linear-gradient(145deg, #0066ff, #0033cc);
+            color: #ffffff;
+            border: none;
+            padding: 15px 25px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: 0 0 15px rgba(30, 144, 255, 0.8), inset 0 0 10px rgba(255, 255, 255, 0.5);
+            transition: 0.3s;
+        }
+        .button:hover {
+            box-shadow: 0 0 20px rgba(30, 144, 255, 1), 0 0 30px rgba(30, 144, 255, 0.7);
+            background: linear-gradient(145deg, #0033cc, #0066ff);
+        }
+        .result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: #ffb3ff;
+            text-shadow: 0 0 5px #ffb3ff, 0 0 10px #ff66ff;
+            display: none; /* Hidden initially */
+        }
+        .upload-section h2 {
+            color: #ffb3ff;
+            text-shadow: 0 0 10px #ff66ff, 0 0 15px #ff66ff;
+        }
+        .upload-section p {
+            color: #e0e0e0;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Radionically Enhance Your Orgone Amplifier</h1>
+    <div class="upload-section">
+        <h2>Upload Recent Photo</h2>
+        <p>Please upload a recent photo (taken within the last 48 hours) of your orgone amplifier.</p>
+        <input type="file" id="orgoneImage" accept="image/*">
+        <br>
+        <button class="button" id="enhanceButton">Enhance Range</button>
+        <div class="result" id="resultMessage">The range of your orgone amplifier has been increased across the universe!</div>
+    </div>
+
+    <script>
+        document.getElementById('enhanceButton').addEventListener('click', function() {
+            const fileInput = document.getElementById('orgoneImage');
+            if (fileInput.files.length > 0) {
+                const resultMessage = document.getElementById('resultMessage');
+                resultMessage.style.display = 'block';
+            } else {
+                alert('Please upload a recent photo of the orgone amplifier.');
+            }
+        });
+    </script>
+
+</body>
+</html>
